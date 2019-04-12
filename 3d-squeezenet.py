@@ -23,8 +23,6 @@ else:
         else:
 		img_input = input_tensor
 
-print img_input
-
 def firemodule(x, filters, name="firemodule"):
 	squeeze_filter, expand_filter1, expand_filter2 = filters
 	squeeze = Convolution3D(squeeze_filter, (1, 1, 1), activation='relu', padding='same', name=name + "/squeeze1x1x1")(x)
